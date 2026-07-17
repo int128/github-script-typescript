@@ -1,2 +1,3 @@
 # github-script-typescript
-Run TypeScript from actions/github-script
+
+This is an example of running TypeScript from actions/github-script.
