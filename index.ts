@@ -7,10 +7,12 @@ type GitHubScriptContext = {
 export const main = async ({ core, context, github }: GitHubScriptContext) => {
   core.info('Hello from TypeScript!')
 
-  await github.rest.issues.createComment({
-    owner: context.repo.owner,
-    repo: context.repo.repo,
-    issue_number: context.issue.number,
-    body: 'Hello from TypeScript!'
-  })
+  if (context.eventName === 'pull_request') {
+    await github.rest.issues.createComment({
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      issue_number: context.issue.number,
+      body: 'Hello from TypeScript!'
+    })
+  }
 }
