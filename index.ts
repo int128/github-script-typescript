@@ -1,7 +1,10 @@
+import type * as core from '@actions/core'
+import type * as github from '@actions/github'
+
 type GitHubScriptContext = {
-  core: typeof import('@actions/core')
-  context: typeof import('@actions/github').context
-  github: ReturnType<typeof import('@actions/github').getOctokit>
+  core: typeof core
+  context: typeof github.context
+  github: ReturnType<typeof github.getOctokit>
 }
 
 export const main = async ({ core, context, github }: GitHubScriptContext) => {
