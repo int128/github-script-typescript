@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.13.1",
+  "devDependencies": {
+    "@tsconfig/node24": "24.0.4",
+    "pnpm": "11.13.1",
+    "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "@actions/core": "3.0.1",
+    "@actions/github": "9.1.1"
+  }
+}
