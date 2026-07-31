@@ -1,6 +1,6 @@
 import type * as core from '@actions/core'
 import type * as github from '@actions/github'
-import { example } from './example.js'
+import { example } from './example.ts'
 
 type GitHubScriptContext = {
   core: typeof core
