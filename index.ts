@@ -1,5 +1,6 @@
 import type * as core from '@actions/core'
 import type * as github from '@actions/github'
+import { example } from './example.ts'
 
 type GitHubScriptContext = {
   core: typeof core
@@ -15,7 +16,7 @@ export const main = async ({ core, context, github }: GitHubScriptContext) => {
       owner: context.repo.owner,
       repo: context.repo.repo,
       issue_number: context.issue.number,
-      body: 'Hello from TypeScript!'
+      body: example()
     })
   }
 }
